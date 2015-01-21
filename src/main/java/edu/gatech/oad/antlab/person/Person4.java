@@ -1,4 +1,6 @@
-package edu.gatech.oad.antlab.person;
+package edu.gatech.oad.antlab.person.files.src.Person4;
+
+
 
 /**
  *  A simple class for person 4
@@ -28,10 +30,32 @@ public class Person4 {
      *
      * @param input the string to be modified
      * @return the modified string
+     *
+     * str.getChar(0)
      */
     private String calc(String input) {
       //Person 4 put your implementation here
-      return null;
+      String result = new String();
+      for(int i= 0; i < input.length(); i++) {
+        char character = input.charAt(i);
+        int cast = (int) character;
+        int codePoint = String.valueOf(character).codePointAt(0);
+        if(codePoint == 57) {
+          codePoint = 48;
+        }
+        if(codePoint == 90) {
+          codePoint = 65;
+        }
+        if(codePoint == 122) {
+          codePoint = 97;
+        }
+        else {
+          codePoint = codePoint + 1;
+        }
+        char again = (char)codePoint;
+        result = result + again;
+      }
+      return result;
     }
     
     /**
@@ -42,9 +66,7 @@ public class Person4 {
      * @return the string representing the 
      *         object
      */
-    public String toString(String input) {
-      return name + calc(input);
+    public String toString(String input) {return name + calc(input);
     }
-
 }
 
