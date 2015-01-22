@@ -39,20 +39,19 @@ public class Person4 {
       for(int i= 0; i < input.length(); i++) {
         char character = input.charAt(i);
         int cast = (int) character;
-        int codePoint = String.valueOf(character).codePointAt(0);
-        if(codePoint == 57) {
-          codePoint = 48;
+        if(cast == 57) {
+          cast = 48;
         }
-        if(codePoint == 90) {
-          codePoint = 65;
+        if(cast == 90) {
+          cast = 65;
         }
-        if(codePoint == 122) {
-          codePoint = 97;
+        if(cast == 122) {
+          cast = 97;
         }
         else {
-          codePoint = codePoint + 1;
+          cast = cast + 1;
         }
-        char again = (char)codePoint;
+        char again = (char)cast;
         result = result + again;
       }
       return result;
