@@ -1,4 +1,7 @@
 package edu.gatech.oad.antlab.person;
+import java.util.Collections;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *  A simple class for person 2
@@ -36,9 +39,9 @@ public class Person2 {
             charList.add(c);
         }
         Collections.shuffle(charList);
-        StringBuilder str = new StringBuilder();
+        String str = "";
         for(char c : charList) {
-            str.append(c);
+            str = str + c;
         }
         return str;
 	}
