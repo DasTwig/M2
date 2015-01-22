@@ -31,7 +31,16 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
-	  return null;
+        List<Character> charList = new ArrayList<Character>();
+        for(char c : input.toCharArray()) {
+            charList.add(c);
+        }
+        Collections.shuffle(charList);
+        StringBuilder str = new StringBuilder();
+        for(char c : charList) {
+            str.append(c);
+        }
+        return str;
 	}
 	/**
 	 * Return a string rep of this object
